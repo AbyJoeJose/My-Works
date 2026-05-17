@@ -1,5 +1,5 @@
 # Aby Joe Jose — Data Science Portfolio
-📍 Potsdam, NY &nbsp;|&nbsp; [LinkedIn](https://www.linkedin.com/in/aby-joe-jose-88959021b/) &nbsp;|&nbsp; [Email](mailto:abyjoejose00@gmail.com)
+📍 Potsdam, NY &nbsp;|&nbsp; [LinkedIn](https://www.linkedin.com/in/aby-joe-jose-88959021b/) &nbsp;|&nbsp; 📧 abyjoejose00@gmail.com
 > End-to-end data science projects spanning machine learning, NLP, SQL analytics, deep learning, LLMs, and interactive dashboards — built on real-world datasets.
 
 ---
