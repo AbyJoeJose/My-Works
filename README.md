@@ -140,7 +140,7 @@ Integrates PM2.5 air quality data (EPA), weather observations (NOAA), and wind d
 
 ## 📬 Contact
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/aby-joe-jose-88959021b/) &nbsp;)
+- 💼 [LinkedIn](https://www.linkedin.com/in/aby-joe-jose-88959021b/) &nbsp;
 - 📧 abyjoejose00@gmail.com
 
 ---
