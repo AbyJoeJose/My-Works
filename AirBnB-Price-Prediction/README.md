@@ -67,7 +67,6 @@ This project tackles the problem in two stages:
 | Tuning | GridSearchCV (5-fold CV) on all three models |
 | Evaluation | Accuracy · Precision · Recall · F1 · ROC-AUC |
 | Visuals | Confusion Matrix · ROC Curves · Feature Importance · Decision Tree diagram |
-
 ---
 
 ## 📈 Results
