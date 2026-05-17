@@ -69,26 +69,6 @@ This project tackles the problem in two stages:
 | Visuals | Confusion Matrix · ROC Curves · Feature Importance · Decision Tree diagram |
 ---
 
-## 📈 Results
-
-### Regression
-
-| Model | RMSE | MAE | R² |
-|-------|------|-----|----|
-| Linear Regression | baseline | baseline | baseline |
-| Random Forest (Tuned) | ↓ improved | ↓ improved | ↑ improved |
-| XGBoost (Tuned) | best | best | best |
-
-### Classification
-
-| Model | Accuracy | F1 | ROC-AUC |
-|-------|----------|----|---------|
-| Logistic Regression | baseline | — | — |
-| Decision Tree (GridSearch) | — | — | — |
-| Random Forest (GridSearch) | best | best | best |
-
----
-
 ## 🛠️ Tools & Libraries
 
 | Category | Tools |
