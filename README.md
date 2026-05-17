@@ -1,6 +1,6 @@
 # Aby Joe Jose — Data Science Portfolio
 
-📍 Potsdam, NY &nbsp;|&nbsp; [LinkedIn](https://www.linkedin.com/in/abyjoejose) &nbsp;|&nbsp; [Email](mailto:your@email.com)
+📍 Potsdam, NY &nbsp;|&nbsp; [LinkedIn]([https://www.linkedin.com/in/abyjoejose](https://www.linkedin.com/in/aby-joe-jose-88959021b/)) &nbsp;|&nbsp; [Email](abyjoejose00@gmail.com)
 
 > End-to-end data science projects spanning machine learning, NLP, SQL analytics, deep learning, LLMs, and interactive dashboards — built on real-world datasets.
 
@@ -142,8 +142,8 @@ Integrates PM2.5 air quality data (EPA), weather observations (NOAA), and wind d
 
 ## 📬 Contact
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/abyjoejose) ← *update this*
-- 📧 [Email](mailto:your@email.com) ← *update this*
+- 💼 [LinkedIn]([https://www.linkedin.com/in/abyjoejose](https://www.linkedin.com/in/aby-joe-jose-88959021b/))
+- 📧 [Email](abyjoejose00@gmail.com)
 
 ---
 
