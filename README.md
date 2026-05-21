@@ -1,5 +1,7 @@
 # Aby Joe Jose — Data Science Portfolio
+
 📍 Potsdam, NY &nbsp;|&nbsp; [LinkedIn](https://www.linkedin.com/in/aby-joe-jose-88959021b/) &nbsp;|&nbsp; 📧 abyjoejose00@gmail.com
+
 > End-to-end data science projects spanning machine learning, NLP, SQL analytics, deep learning, LLMs, and interactive dashboards — built on real-world datasets.
 
 ---
@@ -11,50 +13,50 @@
 ---
 
 #### [🏠 AirBnB Price Prediction](./AirBnB-Price-Prediction/)
-Predicts nightly listing prices for 50,000+ New York City Airbnb properties using regression models. Includes geospatial analysis, feature engineering, and comparison of Linear Regression, Random Forest, and Gradient Boosting.
+Predicts nightly listing prices for New York City Airbnb properties using regression and classification models. Includes geospatial analysis, feature engineering, SMOTE for class imbalance, PCA, and comparison of Linear Regression, Random Forest, and XGBoost with GridSearchCV.
 
-**Tools:** Python · Pandas · Scikit-learn · Folium · Seaborn  
-**Techniques:** Regression · Feature Engineering · Geospatial Analysis
+**Tools:** Python · Pandas · Scikit-learn · XGBoost · imbalanced-learn · Seaborn  
+**Techniques:** Regression · Classification · SMOTE · PCA · GridSearchCV · Feature Engineering
 
 ---
 
 #### [🌦️ Australia Weather Prediction](./Australia-Weather-Prediction/)
-Binary classifier to predict next-day rainfall across Australia using 145,000+ daily weather station observations. Addresses class imbalance and evaluates models using ROC-AUC and F1.
+Binary classifier predicting daily rainfall in the **Melbourne area** using 7,557 weather observations from 2008–2017. Applies scikit-learn Pipeline with ColumnTransformer, GridSearchCV with StratifiedKFold, and compares Random Forest (**84% accuracy**) and Logistic Regression (83%).
 
-**Tools:** Python · Pandas · Scikit-learn · XGBoost · Seaborn  
-**Techniques:** Classification · Class Imbalance · Ensemble Methods
+**Tools:** Python · Pandas · Scikit-learn · Matplotlib · Seaborn  
+**Techniques:** Binary Classification · Pipeline · GridSearchCV · StratifiedKFold · Feature Engineering
 
 ---
 
-#### [🚲 Bike Sharing Profit Prediction](./Bike-Sharing-Profit-Prediction/)
-Forecasts hourly bike rental demand over two years of data to help bike-sharing operators pre-position fleets and maximize revenue. Captures commute-hour peaks and seasonal trends.
+#### [🚲 Bike Sharing Demand Prediction](./Bike-Sharing-Profit-Prediction/)
+Forecasts daily bike rental demand using iterative OLS Linear Regression with RFE feature selection and VIF-based multicollinearity elimination across **10 successive models (LM1–LM10)**. Applied to 730 daily records from 2018–2019. Final model achieves R²=0.777 (train) / **0.780 (test)** with 11 interpretable predictors.
 
-**Tools:** Python · Pandas · Scikit-learn · Matplotlib  
-**Techniques:** Regression · Time-Series Features · Ensemble Methods
+**Tools:** Python · Pandas · Scikit-learn · Statsmodels · Matplotlib · Seaborn  
+**Techniques:** OLS Regression · RFE · VIF · Multicollinearity Elimination · Feature Engineering
 
 ---
 
 #### [🗽 NYC Borough Prediction](./NYC-Borough-Prediction/)
-Classifies NYC taxi pickups into the five boroughs using geospatial coordinates, time-of-day, and trip features. Explores geospatial decision boundaries and handles significant class imbalance.
+Multiclass classifier predicting which of NYC's 5 boroughs a property belongs to — using 84,548 Property Sales transactions and 6 models (Logistic Regression, Decision Tree, SVC, **Random Forest**, Gradient Boosting, Neural Network). Random Forest achieves the best result: **F1=0.72, Accuracy=76%**.
 
-**Tools:** Python · Pandas · Scikit-learn · Folium · Seaborn  
-**Techniques:** Multiclass Classification · Geospatial Features · Random Forest
+**Tools:** Python · Pandas · Scikit-learn · imbalanced-learn · TensorFlow/Keras · Seaborn  
+**Techniques:** Multiclass Classification · SMOTE · GridSearchCV · Neural Networks · Pipeline
 
 ---
 
 #### [📱 Telecom Customer Churn Prediction](./Telecom-Churn-Prediction/)
-Identifies telecom customers at risk of cancelling their subscription, enabling proactive retention campaigns. Prioritizes recall to minimize missed churners — the most costly error for the business.
+Identifies telecom customers at risk of cancelling their subscription — enabling proactive retention campaigns. Prioritizes recall to minimize missed churners. Applied to 99,999 customers with RFE feature selection down to 19 features and SMOTE for class balancing. Best model achieves **83.4% test accuracy**.
 
 **Tools:** Python · Pandas · Scikit-learn · XGBoost · imbalanced-learn  
-**Techniques:** Binary Classification · SMOTE · ROC-AUC · Precision-Recall
+**Techniques:** Binary Classification · SMOTE · RFE · ROC-AUC · Precision-Recall
 
 ---
 
 #### [🚀 SpaceX Falcon 9 Launch Success Prediction](./SpaceX-Launch-Success-Prediction/)
-Predicts whether a Falcon 9 first-stage booster will successfully land and be recovered — enabling cost estimation for competing launch companies. Data collected via the SpaceX REST API and web scraping.
+End-to-end capstone predicting whether a Falcon 9 first stage will land successfully — enabling launch cost estimation. Spans 5 labs: SpaceX REST API data collection, SQL analysis (10 queries on SQLite), interactive Folium maps, Plotly Dash dashboard, and 4 ML models with GridSearchCV. **Decision Tree wins at 88.9% test accuracy.**
 
-**Tools:** Python · Pandas · Scikit-learn · Folium · Plotly · Requests · BeautifulSoup  
-**Techniques:** Classification · REST API · Web Scraping · GridSearchCV · Interactive Maps
+**Tools:** Python · Pandas · Scikit-learn · Folium · Plotly Dash · Requests · BeautifulSoup · SQLite  
+**Techniques:** Classification · REST API · Web Scraping · SQL · GridSearchCV · Interactive Maps
 
 ---
 
@@ -63,17 +65,18 @@ Predicts whether a Falcon 9 first-stage booster will successfully land and be re
 ---
 
 #### [🔤 NLP Pipeline: Job Market Analysis](./NLP-Job-Market-Analysis/)
-End-to-end NLP pipeline applied to 50,000+ real job postings — progressing from classical NLP through deep learning and production LLM systems.
+End-to-end NLP pipeline applied to real-world job postings from ZipRecruiter — progressing from classical NLP through deep learning and production LLM systems across 9 modules.
 
 | Module | Technique |
 |--------|-----------|
-| Text Classification | CountVectorizer + Logistic Regression (16 scenarios) |
-| Tokenization | NLTK, BPE from scratch, Herdan's Law |
-| Word Vectors | TF-IDF, GloVe, Word2Vec, cosine similarity |
-| Neural Networks | PyTorch feedforward network on TF-IDF features |
-| Language Generation | Fine-tuned DistilGPT2, beam search, top-p/top-k |
-| NER / Skill Tagging | Fine-tuned DistilBERT (BIO scheme) |
-| Prompt Engineering | Mistral-7B on AWS Bedrock — structured JSON extraction |
+| Data Collection & EDA | Regex, JSON parsing, acronym & date extraction |
+| Text Classification | CountVectorizer + Logistic Regression (16 preprocessing scenarios, ~83% F1) |
+| Tokenization | NLTK, BPE tokenizer from scratch, Herdan's Law |
+| Word Vectors | TF-IDF, GloVe (50d), Word2Vec (CBOW + Skip-gram), cosine similarity |
+| Neural Networks | PyTorch feedforward network on TF-IDF features (10k dims, 20 epochs) |
+| Language Generation | Fine-tuned DistilGPT2 — beam search, top-p, top-k sampling |
+| NER / Skill Tagging | Fine-tuned DistilBERT (BIO scheme) — O · B-SKILL · I-SKILL |
+| Prompt Engineering | Mistral-7B on AWS Bedrock — structured JSON skill extraction |
 | RAG System | FAISS + sentence-transformers + Mistral-7B + LangChain |
 
 **Tools:** Python · NLTK · HuggingFace Transformers · PyTorch · Gensim · LangChain · AWS Bedrock · FAISS  
@@ -86,18 +89,20 @@ End-to-end NLP pipeline applied to 50,000+ real job postings — progressing fro
 ---
 
 #### [🎬 IMDB Movie Analysis (SQL)](./IMDB-Movie-Analysis-SQL/)
-Exploratory analysis of 80,000+ IMDB movie records using SQL to uncover genre trends, director performance, rating distributions, and the relationship between runtime and audience scores.
+SQL-based exploratory analysis answering **29 structured business questions** for RSVP Movies across 6 relational tables (movie, genre, ratings, names, role_mapping, director_mapping). Delivers data-driven recommendations on genre, director, cast, and production partners for their 2022 global film release.
 
-**Tools:** SQL · MySQL · Python · Matplotlib  
-**Techniques:** Aggregation · Window Functions · CTEs · Exploratory Analysis
+**Key findings:** Drama is the dominant genre · James Mangold is top director · Vijay Sethupathi leads Indian actors · Marvel Studios tops by total votes
+
+**Tools:** SQL · MySQL  
+**Techniques:** Window Functions · CTEs · DENSE_RANK · LEAD · Weighted Averages · Subqueries
 
 ---
 
 #### [🏦 Sales Data Warehouse & ETL Pipeline (SQL)](./Sales-Data-Warehouse-SQL/)
-Designs and implements a star-schema data warehouse for retail sales transactions, including dimension/fact tables and an incremental refresh ETL pipeline — a core pattern in production data engineering.
+Designs and implements a production-style **star-schema data warehouse** for a retail business handling both sales and rental transactions — including 4 dimension tables, a Revenue fact table, an IntermediateFact staging layer, a one-way aggregate, and a DailyStoreSnapshot with 7 KPI columns. Built and loaded using MySQL.
 
-**Tools:** SQL · MySQL / PostgreSQL  
-**Techniques:** Star Schema · ETL · Stored Procedures · Incremental Refresh · Indexing
+**Tools:** SQL · MySQL  
+**Techniques:** Star Schema · ETL · Surrogate Keys · Snapshot Fact Tables · Aggregate Tables
 
 ---
 
@@ -105,11 +110,19 @@ Designs and implements a star-schema data warehouse for retail sales transaction
 
 ---
 
-#### [🛒 Walmart Sales Dashboard (R Shiny)](./Walmart-Sales-RShiny/)
-Interactive R Shiny dashboard for exploring 420,000+ weekly Walmart sales records across 45 stores and 99 departments. Features dynamic filtering, holiday impact analysis, and trend visualization.
+#### [📚 Best Selling Books by 5 Leading Authors (R / Plotly)](./Walmart-Sales-RShiny/)
+Analyzes Amazon bestselling books to identify the top 5 authors by a composite Score metric (`User.Rating × 1,000 + Reviews`) and ranks their top 5 books each — rendered as a **faceted interactive Plotly bar chart** with hover tooltips showing full title, price, genre, and score.
 
-**Tools:** R · R Shiny · ggplot2 · plotly · dplyr  
-**Techniques:** Interactive Dashboard · Time-Series Visualization · Retail Analytics
+**Tools:** R · ggplot2 · Plotly · dplyr · RColorBrewer  
+**Techniques:** Composite Scoring · Deduplication · Interactive Visualization · Faceting
+
+---
+
+#### [🛒 Walmart 2024–25 Sales Dashboard (R Shiny)](./Walmart-Sales-RShiny/)
+Interactive R Shiny dashboard visualizing Walmart customer purchase amounts by product category — with **5 toggleable demographic filters** (Age Group, City, Gender, Repeat Customer, Discount Applied) that dynamically update a bar chart using reactive programming. Each filter has a checkbox to disable it entirely, preserving selections while showing all data.
+
+**Tools:** R · Shiny · shinyjs · ggplot2 · dplyr · scales  
+**Techniques:** Reactive Programming · Dynamic Filtering · Interactive Dashboard · Age Binning
 
 ---
 
@@ -117,8 +130,8 @@ Interactive R Shiny dashboard for exploring 420,000+ weekly Walmart sales record
 
 ---
 
-#### [🌫️ Weather & Air Quality Data Integration (NYC)](./Weather-Air-Quality-NYC/)
-Integrates PM2.5 air quality data (EPA), weather observations (NOAA), and wind direction (Open-Meteo) for Albany and Syracuse, NY into a normalized MySQL database. Reveals the relationship between meteorological conditions and pollution levels through polar plots and correlation analysis.
+#### [🌫️ Weather & Air Quality Data Integration (NYC)](./Weather-Air-Quality-NY/)
+Integrates PM2.5 air quality data (EPA API), weather observations (NOAA API), and wind direction (Open-Meteo API) for Albany and Syracuse, NY into a normalized MySQL database using SQLAlchemy with `ON DUPLICATE KEY UPDATE`. Reveals the relationship between meteorological conditions and pollution levels through 5 visualizations including polar plots and seasonal analysis.
 
 **Tools:** Python · Pandas · Requests · SQLAlchemy · MySQL · Matplotlib  
 **Techniques:** REST API Integration · ETL · Relational Database Design · Environmental Data Analysis
@@ -130,17 +143,17 @@ Integrates PM2.5 air quality data (EPA), weather observations (NOAA), and wind d
 | Category | Skills |
 |----------|--------|
 | **Languages** | Python · R · SQL |
-| **ML & Modeling** | Scikit-learn · XGBoost · PyTorch · Regression · Classification · Clustering |
+| **ML & Modeling** | Scikit-learn · XGBoost · Statsmodels · PyTorch · TensorFlow/Keras · Regression · Classification · Clustering |
 | **NLP & LLMs** | NLTK · HuggingFace Transformers · Gensim · AWS Bedrock · LangChain · FAISS |
-| **Data & Databases** | Pandas · NumPy · MySQL · PostgreSQL · ETL · Data Warehousing |
-| **Visualization** | Matplotlib · Seaborn · Plotly · Folium · R Shiny |
+| **Data & Databases** | Pandas · NumPy · MySQL · SQLite · ETL · Star Schema · Data Warehousing |
+| **Visualization** | Matplotlib · Seaborn · Plotly · Folium · ggplot2 · R Shiny |
 | **Tools** | Jupyter Notebook · Git · GitHub · Google Colab · AWS |
 
 ---
 
 ## 📬 Contact
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/aby-joe-jose-88959021b/) &nbsp;
+- 💼 [LinkedIn](https://www.linkedin.com/in/aby-joe-jose-88959021b/)
 - 📧 abyjoejose00@gmail.com
 
 ---
