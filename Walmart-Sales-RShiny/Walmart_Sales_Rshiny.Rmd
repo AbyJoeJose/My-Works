@@ -1,0 +1,188 @@
+---
+title: "Project 2"
+output: html_notebook
+author: Aby Joe Jose & Meenakshy M
+date: 04-18-2025
+---
+```{r}
+#Importing required libraries
+library(readr)
+library(dplyr)
+library(shiny)
+library(shinyjs)
+library(ggplot2)
+library(scales)
+```
+
+```{r}
+#Reading the data 
+data <- read.csv('Walmart_customer_purchases.csv')
+data
+```
+
+```{r}
+#Removing cities that have only sales in one category
+data <- data %>%
+  group_by(City) %>%
+  filter(n_distinct(Category) > 1) %>%
+  ungroup()
+data
+```
+
+```{r}
+#Dropping unwanted data, Customer_ID
+data <- data %>% select(-Customer_ID)
+data
+```
+```{r}
+#Creating a age group column
+data$AgeGroup <- cut(data$Age,
+                     breaks = c(0,20,30,40,50,60,Inf),
+                     labels=c('0-20','20-30','30-40','40-50','50-60','66+'),
+                     right = TRUE )
+```
+
+
+```{r}
+#ShinyApp
+ui <- fluidPage(
+  useShinyjs(),
+  titlePanel("Walmart 2024-25 Sales by Category"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      checkboxInput("lock_age", "Disable", value = FALSE),
+      selectInput("selected_age", label = 'Select Age Group',choices = levels(data$AgeGroup),
+                  multiple = TRUE),
+      
+      checkboxInput("lock_city", "Disable", value = FALSE),
+      selectizeInput("selected_city", label = 'Select City',choices = unique(data$City),
+                     multiple = TRUE),
+      
+      checkboxInput("lock_gender", "Disable", value = FALSE),
+      selectInput("selected_gender", label = 'Select Gender', choices = unique(data$Gender),
+                  multiple = TRUE),
+      
+      checkboxInput("lock_repeated", 'Disable',value = FALSE),
+      selectInput('selected_repeated',label = 'Repeated Customer',
+                  choices = unique(data$Repeat_Customer)),
+      
+      checkboxInput("lock_discount", 'Disable',value = FALSE),
+      selectInput('selected_discount',label = 'Discount Applied',
+                  choices = unique(data$Discount_Applied))
+      
+    ),
+    
+    mainPanel(
+      plotOutput("barPlot")
+    )
+  )
+)
+
+server <- function(input, output, session) {
+  
+  observe({
+    if (input$lock_age) {
+      disable("selected_age")
+    } else {
+      enable("selected_age")
+    }
+  })
+  
+  observe({
+    if (input$lock_city) {
+      disable("selected_city")
+    } else {
+      enable("selected_city")
+    }
+  })
+  
+  observe({
+    if(input$lock_gender){
+      disable('selected_gender')
+    } else{
+      enable('selected_gender')
+    }
+  })
+  
+  observe({
+    if(input$lock_repeated){
+      disable('selected_repeated')
+    }else{
+      enable("selected_repeated")
+    }
+  })
+  
+  observe({
+    if(input$lock_discount){
+      disable('selected_discount')
+    }else{
+      enable("selected_discount")
+    }
+  })
+  
+  
+  filtered_data <- reactive({
+    filtered <- data
+    
+    if (!input$lock_city) {
+      filtered <- filtered %>% filter(City %in% input$selected_city)
+    }
+    
+    if (!input$lock_age) {
+      filtered <- filtered %>% filter(AgeGroup %in% input$selected_age)
+    }
+    
+    if (!input$lock_gender){
+      filtered <- filtered %>% filter(Gender %in% input$selected_gender)
+    }
+    
+    if(!input$lock_repeated){
+      filtered <- filtered %>% filter(Repeat_Customer %in% input$selected_repeated)
+    }
+    
+    if(!input$lock_discount){
+      filtered <- filtered %>% filter(Discount_Applied %in% input$selected_discount)
+    }
+    
+    filtered %>%
+      group_by(Category) %>%
+      summarise(Purchase_Amount = sum(Purchase_Amount, na.rm = TRUE), .groups = "drop")
+  })
+  
+  output$barPlot <- renderPlot({
+    ggplot(filtered_data(), 
+           aes(x = factor(Category), y = Purchase_Amount, fill = Category)) + 
+      geom_bar(stat = 'identity',width = 0.2) + 
+      scale_y_continuous(labels = label_number(scale_cut = cut_short_scale())) +
+      theme_minimal() + 
+      theme(
+        axis.title.x = element_text(size = 15),
+        axis.title.y = element_text(size = 15),
+        axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
+        title = element_text(size = 18)
+      ) + 
+      labs(title = "Purchases by Category",
+           subtitle = ifelse(input$lock_age & input$lock_city & input$lock_gender & input$lock_repeated & input$lock_discount, "Showing all data",  
+                             paste("Filtered by",
+                                                                                                                                                        ifelse(!input$lock_age, paste("Age Group:",paste(input$selected_age,collapse = ",")),""),  
+                                                                                                                                                          ifelse(!input$lock_city, paste("City:", paste(input$selected_city,collapse = ",")), ""),
+                                                                                                                                                          ifelse(!input$lock_gender,paste("Gender:",paste(input$selected_gender,collapse = ",")),""),
+                                                                                                                                                          
+                                                                                                                                                          ifelse(!input$lock_repeated,paste('Repeated Customer:',input$selected_repeated),""),
+                                                                                                                                                          
+                                                                                                                                                          ifelse(!input$lock_discount,paste('Discount Applied:',input$selected_discount),"")
+                                                                                                                                                          
+           )),
+           y = "Purchase Amount", x = "Category")
+  })
+}
+
+shinyApp(ui, server)
+
+```
+
+
+
+
