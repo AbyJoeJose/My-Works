@@ -36,6 +36,14 @@ Forecasts daily bike rental demand using iterative OLS Linear Regression with RF
 
 ---
 
+#### [🏦 Credit Default Prediction](./Credit-Default-Prediction/)
+End-to-end credit risk project predicting whether a loan applicant will default using **~307K home credit applications**. Covers deep EDA across two datasets (application + previous application history), feature engineering, SMOTE for class imbalance (~8% default rate), and comparison of 4 classifiers. **XGBoost achieves ~91% accuracy and ~0.80 ROC-AUC**. Includes threshold tuning to maximize recall — minimizing missed defaulters — and feature importance analysis with actionable business recommendations.
+
+**Tools:** Python · Pandas · Scikit-learn · XGBoost · imbalanced-learn · Seaborn  
+**Techniques:** Binary Classification · EDA · SMOTE · Threshold Tuning · Feature Importance · ROC-AUC
+
+---
+
 #### [🗽 NYC Borough Prediction](./NYC-Borough-Prediction/)
 Multiclass classifier predicting which of NYC's 5 boroughs a property belongs to — using 84,548 Property Sales transactions and 6 models (Logistic Regression, Decision Tree, SVC, **Random Forest**, Gradient Boosting, Neural Network). Random Forest achieves the best result: **F1=0.72, Accuracy=76%**.
 
