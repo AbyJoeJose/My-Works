@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HTBYWZN8H7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HTBYWZN8H7');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aby Joe Jose — Data Scientist</title>
+<style>
+
+
+
+
+
+
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+:root{
+  --ink:#0d0d0d;--ink2:#3a3a3a;--ink3:#7a7a7a;
+  --paper:#faf8f4;--paper2:#f0ede6;--paper3:#e8e3da;
+  --accent:#1a3c5e;--gold:#c8a96e;--green:#2d6a4f;
+  --ff-d:'Calibri','Gill Sans','Optima','Segoe UI',sans-serif;
+  --ff-b:'Calibri','Gill Sans','Optima','Segoe UI',Arial,sans-serif;
+  --ff-m:'Calibri','Gill Sans','Segoe UI',sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--paper);color:var(--ink);font-family:var(--ff-b);font-weight:300;line-height:1.7;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,248,244,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--paper3);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:64px}
+.nav-logo{font-family:var(--ff-d);font-weight:900;font-size:1.15rem;letter-spacing:-.02em;color:var(--accent)}
+.nav-links{display:flex;gap:0;list-style:none}
+.nav-links a{text-decoration:none;color:var(--ink2);font-family:var(--ff-b);font-size:.78rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;padding:.45rem .85rem;border-radius:3px;transition:color .18s,background .18s,transform .18s;display:inline-block}
+.nav-links a:hover{color:var(--accent);background:rgba(26,60,94,.07);transform:translateY(-1px)}
+.nav-contact{background:var(--accent);color:#fff;padding:.45rem 1.25rem;border-radius:2px;font-family:var(--ff-b);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:background .2s,transform .18s;display:inline-block}
+.nav-contact:hover{background:#122b44;transform:translateY(-1px)}
+.hero{min-height:100vh;display:flex;align-items:center;padding:80px 5vw 0;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--paper) 55%,var(--paper2) 100%);z-index:0}
+.hero-grid{position:absolute;inset:0;background-image:radial-gradient(circle,var(--paper3) 1px,transparent 1px);background-size:40px 40px;opacity:.4;z-index:0}
+.hero-content{position:relative;z-index:1;max-width:700px}
+.hero-eyebrow{font-family:var(--ff-m);font-size:.78rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
+.hero-eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold)}
+.hero-name{font-family:var(--ff-d);font-size:clamp(3rem,7vw,5.5rem);font-weight:900;line-height:1.05;letter-spacing:-.03em;color:var(--ink);margin-bottom:1.5rem}
+.hero-name span{color:var(--accent)}
+.hero-tagline{font-size:1.1rem;font-family:var(--ff-b);color:var(--ink2);max-width:520px;margin-bottom:2.5rem;font-weight:300;line-height:1.8}
+.hero-badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:3rem}
+.badge{background:var(--paper2);border:1px solid var(--paper3);padding:.35rem .9rem;border-radius:2px;font-size:.78rem;font-family:var(--ff-m);color:var(--ink2);letter-spacing:.04em}
+.badge.accent{background:var(--accent);color:#fff;border-color:var(--accent)}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{padding:.75rem 2rem;border-radius:2px;font-family:var(--ff-b);font-size:.85rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block}
+.btn-primary{background:var(--accent);color:#fff;border:none}
+.btn-primary:hover{background:#122b44;transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.btn-outline:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+.hero-stats{position:absolute;right:5vw;bottom:15%;z-index:1;display:flex;flex-direction:column;gap:2rem}
+.stat-item{text-align:right}
+.stat-num{font-family:var(--ff-d);font-size:2.5rem;font-weight:900;color:var(--accent);line-height:1}
+.stat-label{font-size:.73rem;font-family:var(--ff-b);color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;margin-top:.25rem}
+.scroll-hint{position:absolute;bottom:3rem;left:5vw;z-index:1;display:flex;align-items:center;gap:.75rem;font-size:.73rem;font-family:var(--ff-b);color:var(--ink3);letter-spacing:.1em;text-transform:uppercase}
+.scroll-line{width:40px;height:1px;background:var(--ink3)}
+section{padding:6rem 5vw}
+.section-label{font-family:var(--ff-m);font-size:.72rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.75rem}
+.section-label::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
+.section-title{font-family:var(--ff-d);font-size:clamp(2rem,4vw,3rem);font-weight:900;letter-spacing:-.02em;color:var(--ink);margin-bottom:3rem;line-height:1.1}
+.skills-section{background:var(--ink);color:#fff}
+.skills-section .section-label{color:var(--gold)}
+.skills-section .section-title{color:#fff}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+.skill-category{border:1px solid rgba(255,255,255,.1);padding:2rem;border-radius:4px;transition:.3s}
+.skill-category:hover{border-color:var(--gold);transform:translateY(-3px)}
+.skill-cat-title{font-family:var(--ff-d);font-size:1.1rem;font-weight:700;color:var(--gold);margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.skill-bars{display:flex;flex-direction:column;gap:.75rem}
+.skill-bar-item{display:flex;flex-direction:column;gap:.3rem}
+.skill-bar-label{font-size:.8rem;font-family:var(--ff-b);color:rgba(255,255,255,.7);display:flex;justify-content:space-between}
+.skill-bar-track{height:4px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden}
+.skill-bar-fill{height:100%;border-radius:2px;background:var(--gold);width:0%;transition:width 1.4s cubic-bezier(.22,1,.36,1)}
+.exp-timeline{position:relative;max-width:860px}
+.exp-timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--paper3)}
+.exp-item{padding-left:3rem;position:relative;margin-bottom:4rem}
+.exp-dot{position:absolute;left:-5px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--gold);border:2px solid var(--paper)}
+.exp-meta{font-family:var(--ff-m);font-size:.72rem;color:var(--green);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem}
+.exp-role{font-family:var(--ff-d);font-size:1.4rem;font-weight:700;color:var(--ink);margin-bottom:.25rem;line-height:1.2}
+.exp-org{font-family:var(--ff-b);font-size:.95rem;color:var(--accent);font-weight:500;margin-bottom:1rem}
+.exp-desc{font-family:var(--ff-b);color:var(--ink2);font-size:.925rem;line-height:1.75;font-weight:300}
+.exp-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.exp-tag{background:var(--paper2);border:1px solid var(--paper3);padding:.2rem .65rem;border-radius:2px;font-size:.72rem;font-family:var(--ff-m);color:var(--ink3)}
+.projects-section{background:var(--paper2)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.project-card{background:var(--paper);border:1px solid var(--paper3);border-radius:4px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s;cursor:pointer;text-decoration:none;display:block}
+.project-card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 40px rgba(26,60,94,.12)}
+.project-card-top{padding:1.5rem 1.75rem 1rem;border-bottom:1px solid var(--paper3);position:relative}
+.project-card-num{font-family:var(--ff-d);font-size:2.2rem;font-weight:900;color:var(--paper3);line-height:1;margin-bottom:.6rem;transition:color .25s}
+.project-card:hover .project-card-num{color:var(--gold)}
+.project-card-title{font-family:var(--ff-d);font-size:1.05rem;font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:.4rem}
+.project-card-subtitle{font-family:var(--ff-b);font-size:.82rem;color:var(--ink3);line-height:1.6;font-weight:300}
+.project-card-arrow{position:absolute;top:1.25rem;right:1.5rem;font-size:.85rem;color:var(--paper3);transition:color .25s,transform .25s}
+.project-card:hover .project-card-arrow{color:var(--accent);transform:translate(2px,-2px)}
+.project-card-viz{padding:.5rem 1.75rem 1rem;height:120px;position:relative}
+.project-card-bottom{padding:.9rem 1.75rem 1.25rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.project-pill{background:var(--paper2);padding:.18rem .55rem;border-radius:2px;font-size:.68rem;font-family:var(--ff-m);color:var(--ink2);border:1px solid var(--paper3)}
+.project-pill.hl{background:var(--accent);color:#fff;border-color:var(--accent)}
+.viz-tabs{display:flex;gap:0;margin-bottom:2.5rem;border:1px solid var(--paper3);border-radius:2px;overflow:hidden;width:fit-content}
+.viz-tab{padding:.6rem 1.5rem;background:transparent;border:none;font-family:var(--ff-b);font-size:.82rem;font-weight:400;color:var(--ink2);cursor:pointer;transition:.2s;letter-spacing:.04em;border-right:1px solid var(--paper3)}
+.viz-tab:last-child{border-right:none}
+.viz-tab.active{background:var(--accent);color:#fff;font-weight:500}
+.viz-panel{display:none}
+.viz-panel.active{display:block}
+.chart-wrapper{background:var(--paper2);padding:2rem;border-radius:4px;border:1px solid var(--paper3)}
+.research-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.5rem}
+.research-card{border-left:3px solid var(--gold);padding:1.75rem 2rem;background:var(--paper2)}
+.research-badge{display:inline-block;background:var(--accent);color:#fff;font-family:var(--ff-m);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .7rem;margin-bottom:1rem}
+.research-title{font-family:var(--ff-d);font-size:1.05rem;font-weight:700;color:var(--ink);line-height:1.45;margin-bottom:.75rem}
+.research-desc{font-family:var(--ff-b);font-size:.875rem;color:var(--ink2);line-height:1.7;font-weight:300}
+.resume-section{background:var(--ink);color:#fff}
+.resume-section .section-title{color:#fff}
+.resume-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:900px}
+.resume-col-title{font-family:var(--ff-m);font-size:.72rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.resume-item{margin-bottom:2rem}
+.resume-item-date{font-family:var(--ff-m);font-size:.7rem;color:rgba(255,255,255,.4);margin-bottom:.25rem}
+.resume-item-title{font-family:var(--ff-b);font-size:.95rem;font-weight:500;color:#fff;margin-bottom:.15rem}
+.resume-item-sub{font-family:var(--ff-b);font-size:.85rem;color:rgba(255,255,255,.5);font-weight:300}
+.certs{display:flex;flex-direction:column;gap:.75rem;margin-top:1rem}
+.cert-item{display:flex;align-items:flex-start;gap:.75rem;padding:.9rem 1rem;border:1px solid rgba(255,255,255,.1);border-radius:2px;text-decoration:none;transition:border-color .2s,background .2s}
+.cert-item:hover{border-color:var(--gold);background:rgba(200,169,110,.05)}
+.cert-icon{width:34px;height:34px;background:var(--gold);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:var(--ff-d);font-weight:900;font-size:.78rem;color:var(--ink);flex-shrink:0;margin-top:2px}
+.cert-name{font-family:var(--ff-b);font-size:.85rem;color:rgba(255,255,255,.85);line-height:1.4;font-weight:400}
+.cert-org{font-family:var(--ff-m);font-size:.72rem;color:var(--gold);margin-top:.25rem}
+.cert-link-hint{font-family:var(--ff-m);font-size:.68rem;color:rgba(255,255,255,.3);margin-top:.2rem}
+.resume-dl{display:inline-flex;align-items:center;gap:.75rem;margin-top:2.5rem;padding:.9rem 2.5rem;background:var(--gold);color:var(--ink);font-family:var(--ff-b);font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background .2s,transform .18s}
+.resume-dl:hover{background:#b8954e;transform:translateY(-2px)}
+.contact-intro{font-family:var(--ff-b);font-size:1.1rem;color:var(--ink2);max-width:480px;line-height:1.8;margin-bottom:3rem;font-weight:300}
+.contact-links{display:flex;flex-direction:column;gap:0;max-width:600px}
+.contact-link{display:flex;align-items:center;gap:1rem;text-decoration:none;color:var(--ink);transition:color .2s,padding-left .2s;padding:.9rem 0;border-bottom:1px solid var(--paper3)}
+.contact-link:hover{color:var(--accent);padding-left:.5rem}
+.contact-link-icon{width:36px;height:36px;background:var(--paper2);border:1px solid var(--paper3);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:.78rem;font-family:var(--ff-m);color:var(--ink2);flex-shrink:0}
+.contact-link-label{font-family:var(--ff-m);font-size:.7rem;color:var(--ink3);letter-spacing:.06em;text-transform:uppercase}
+.contact-link-text{font-family:var(--ff-b);font-size:.9rem;font-weight:300}
+footer{background:var(--ink);color:rgba(255,255,255,.3);font-family:var(--ff-b);font-size:.8rem;padding:2rem 5vw;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.06)}
+.footer-logo{font-family:var(--ff-d);font-weight:900;color:rgba(255,255,255,.6);letter-spacing:-.02em}
+@media(max-width:700px){.hero-stats{display:none}.resume-grid{grid-template-columns:1fr}.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">Aby Joe Jose</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#resume">Resume</a></li>
+  </ul>
+  <a href="#contact" class="nav-contact">Contact</a>
+</nav>
+<section class="hero" id="about">
+  <div class="hero-bg"></div><div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Data Scientist &amp; Analyst</div>
+    <h1 class="hero-name">Aby Joe<br><span>Jose</span></h1>
+    <p class="hero-tagline">MS Applied Data Science — Clarkson University (GPA 3.963). Building scalable ML pipelines, biosignal analytics, and NLP systems that drive real research outcomes.</p>
+    <div class="hero-badges">
+      <span class="badge accent">Available June 2026</span>
+      <span class="badge">Python · R · SQL</span>
+      <span class="badge">Clinical &amp; Environmental Data</span>
+      <span class="badge">ML · NLP · LLM</span>
+      <span class="badge">ETL Pipelines</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="https://github.com/AbyJoeJose/Data-Science-Portfolio" target="_blank" class="btn btn-outline">GitHub Portfolio</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item"><div class="stat-num">3.96</div><div class="stat-label">GPA</div></div>
+    <div class="stat-item"><div class="stat-num">1.67M</div><div class="stat-label">Records Processed</div></div>
+    <div class="stat-item"><div class="stat-num">94%</div><div class="stat-label">QC Improvement</div></div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div>Scroll to explore</div>
+</section>
+<section class="skills-section" id="skills">
+  <div class="section-label">Technical Arsenal</div>
+  <h2 class="section-title">Skills &amp; Expertise</h2>
+  <div class="skills-grid">
+    <div class="skill-category">
+      <div class="skill-cat-title">Programming &amp; Data</div>
+      <div class="skill-bars">
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Python</span><span>95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="95"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>R / RStudio</span><span>88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="88"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>SQL (Advanced)</span><span>90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="90"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Git / GitHub</span><span>85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="85"></div></div></div>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-title">Machine Learning &amp; AI</div>
+      <div class="skill-bars">
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Scikit-learn / XGBoost</span><span>92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="92"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>PyTorch / TensorFlow</span><span>80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="80"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>NLP / LLMs (HuggingFace)</span><span>82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="82"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>AWS Bedrock / LangChain</span><span>75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="75"></div></div></div>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-title">Visualization &amp; BI</div>
+      <div class="skill-bars">
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Tableau / Power BI</span><span>88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="88"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Plotly / Matplotlib</span><span>93%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="93"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>R Shiny Dashboards</span><span>85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="85"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Folium / Geospatial</span><span>78%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="78"></div></div></div>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-title">Data Engineering</div>
+      <div class="skill-bars">
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>ETL Pipeline Design</span><span>90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="90"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>REST API Integration</span><span>87%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="87"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>MySQL / SQLite</span><span>88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="88"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>QC &amp; Anomaly Detection</span><span>91%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="91"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="experience">
+  <div class="section-label">Career</div>
+  <h2 class="section-title">Experience</h2>
+  <div class="exp-timeline">
+    <div class="exp-item"><div class="exp-dot"></div><div class="exp-meta">Feb 2026 – May 2026</div><div class="exp-role">Data Science Intern — NASA Affiliated Sensor Analytics</div><div class="exp-org">TelosAir · Potsdam, NY</div><div class="exp-desc">Built, trained, and optimized ML models (Linear Regression, XGBoost, LightGBM) on high-frequency OPERA optical particle sensor data from the ISS, processing 4 sensors × 6 readings/second × 2 years of data. Engineered distribution-based features achieving <strong>94% improvement in prediction accuracy</strong> (RMSE: 22.3 → 1.23). Delivered Tableau/Plotly dashboards to non-technical stakeholders.</div><div class="exp-tags"><span class="exp-tag">XGBoost</span><span class="exp-tag">LightGBM</span><span class="exp-tag">Feature Engineering</span><span class="exp-tag">Tableau</span><span class="exp-tag">NASA / ISS</span></div></div>
+    <div class="exp-item"><div class="exp-dot"></div><div class="exp-meta">Aug 2025 – May 2026</div><div class="exp-role">Data Analyst — Clinical Research Assistant</div><div class="exp-org">Clarkson University · Potsdam, NY</div><div class="exp-desc">Analyzed multi-modal longitudinal clinical datasets (EEG and Center of Pressure biosignals across 50+ participants). Applied ANOVA and mixed effects models to identify statistically significant rehabilitation outcome trends. Produced R Shiny and Tableau dashboards for principal investigators. Two peer-reviewed publications in preparation.</div><div class="exp-tags"><span class="exp-tag">EEG / Biosignal</span><span class="exp-tag">R / Python</span><span class="exp-tag">ANOVA</span><span class="exp-tag">R Shiny</span><span class="exp-tag">Tableau</span></div></div>
+    <div class="exp-item"><div class="exp-dot"></div><div class="exp-meta">Aug 2025 – May 2026</div><div class="exp-role">Graduate Teaching Assistant — Data Science &amp; Statistics</div><div class="exp-org">Clarkson University · Potsdam, NY</div><div class="exp-desc">Delivered statistical analysis, ML algorithms, and Python/R programming instruction, translating complex technical concepts for diverse student audiences.</div><div class="exp-tags"><span class="exp-tag">Python</span><span class="exp-tag">R</span><span class="exp-tag">Statistics</span><span class="exp-tag">Teaching</span></div></div>
+    <div class="exp-item"><div class="exp-dot"></div><div class="exp-meta">Mar 2025 – Present</div><div class="exp-role">Research Data Analyst — EPA Project Assistant</div><div class="exp-org">Clarkson University · Potsdam, NY</div><div class="exp-desc">Built automated ETL pipelines integrating three government REST APIs (EPA AQS, NOAA CDO, Open-Meteo) into a normalized MySQL database. Developed KPI dashboards for 18 sensor stations over 2 years. Trained and benchmarked ML architectures with cross-validation and hyperparameter tuning for EPA government stakeholders.</div><div class="exp-tags"><span class="exp-tag">ETL</span><span class="exp-tag">REST APIs</span><span class="exp-tag">MySQL</span><span class="exp-tag">Tableau</span><span class="exp-tag">EPA / NOAA</span></div></div>
+    <div class="exp-item"><div class="exp-dot"></div><div class="exp-meta">Jun 2024 – Dec 2024</div><div class="exp-role">Process Associate — Confidential Data Quality &amp; Compliance</div><div class="exp-org">Prochant · Trivandrum, India</div><div class="exp-desc">Processed and validated large volumes of Medicaid and health insurance reimbursement claims. Conducted systematic QA/QC reviews to identify duplicate records and discrepancies, building rigorous data integrity discipline across high-volume healthcare data operations.</div><div class="exp-tags"><span class="exp-tag">QA / QC</span><span class="exp-tag">Healthcare Data</span><span class="exp-tag">Medicaid Claims</span><span class="exp-tag">Data Integrity</span></div></div>
+    <div class="exp-item"><div class="exp-dot"></div><div class="exp-meta">Feb 2024 – Dec 2024</div><div class="exp-role">Robotics &amp; Machine Learning Instructor</div><div class="exp-org">Turito · India (Remote — USA students)</div><div class="exp-desc">Designed and delivered ML and data analytics curriculum to student audiences across the USA, managing end-to-end project ownership with full accountability for learning outcomes.</div><div class="exp-tags"><span class="exp-tag">Machine Learning</span><span class="exp-tag">Curriculum Design</span><span class="exp-tag">Robotics</span></div></div>
+  </div>
+</section>
+<section class="projects-section" id="projects">
+  <div class="section-label">Portfolio</div>
+  <h2 class="section-title">All Projects</h2>
+  <div class="projects-grid" id="projects-grid"></div>
+</section>
+<section id="data-viz">
+  <div class="section-label">Interactive Analytics</div>
+  <h2 class="section-title">Skills &amp; Project Metrics</h2>
+  <div class="viz-tabs">
+    <button class="viz-tab active" onclick="switchViz('overview',this)">Skills Overview</button>
+    <button class="viz-tab" onclick="switchViz('accuracy',this)">Model Accuracy</button>
+    <button class="viz-tab" onclick="switchViz('scale',this)">Data Scale</button>
+  </div>
+  <div class="chart-wrapper">
+    <div class="viz-panel active" id="viz-overview"><canvas id="radarChart" style="max-height:340px;width:100%"></canvas></div>
+    <div class="viz-panel" id="viz-accuracy"><canvas id="accuracyChart" style="max-height:340px;width:100%"></canvas></div>
+    <div class="viz-panel" id="viz-scale"><canvas id="scaleChart" style="max-height:340px;width:100%"></canvas></div>
+  </div>
+</section>
+<section id="research" style="background:var(--paper2)">
+  <div class="section-label">Publications in Preparation</div>
+  <h2 class="section-title">Research</h2>
+  <div class="research-cards">
+    <div class="research-card"><div class="research-badge">Peer Review — In Preparation</div><div class="research-title">Bridging the Gap Between Low-Cost and Reference-Grade Environmental Sensors</div><div class="research-desc">XGBoost-Based Temperature Prediction with Lag Variable Feature Engineering for Sensor Calibration and Performance Optimization — applied to an 18-station EPA environmental monitoring network spanning 2 years of data.</div></div>
+    <div class="research-card"><div class="research-badge">Peer Review — In Preparation</div><div class="research-title">EEG and Center of Pressure Biosignal Analysis for Rehabilitation Outcome Assessment</div><div class="research-desc">A Statistical Modeling Framework for Walking Balance Recovery in Mobility-Impaired Populations. Analyzing longitudinal clinical data across 50+ participants using mixed effects models, time-series methods, and Python/R pipelines.</div></div>
+  </div>
+</section>
+<section class="resume-section" id="resume">
+  <div class="section-label" style="color:var(--gold)">Credentials</div>
+  <h2 class="section-title">Resume</h2>
+  <div class="resume-grid">
+    <div>
+      <div class="resume-col-title">Education</div>
+      <div class="resume-item"><div class="resume-item-date">Jan 2025 – May 2026</div><div class="resume-item-title">MS Applied Data Science</div><div class="resume-item-sub">Clarkson University · GPA 3.963</div></div>
+      <div class="resume-item"><div class="resume-item-date">2019 – 2023</div><div class="resume-item-title">B.Tech Electronics &amp; Communication Engineering</div><div class="resume-item-sub">Rajiv Gandhi Institute of Technology, India</div></div>
+      <div class="resume-col-title" style="margin-top:2rem">Certifications</div>
+      <div class="certs">
+        <a href="https://www.credential.net/e1744963-8fc6-4f4c-bac1-da57bebb2921#acc.R7OGjp2N" target="_blank" class="cert-item"><div class="cert-icon">IIT</div><div><div class="cert-name">Advanced Certificate Programme in Data Science &amp; Deep Learning</div><div class="cert-org">IIIT Bangalore &amp; upGrad · Dec 2024</div><div class="cert-link-hint">&#8599; View credential</div></div></a>
+        <a href="https://www.coursera.org/account/accomplishments/specialization/PI5EBA6E6R2W" target="_blank" class="cert-item"><div class="cert-icon">IBM</div><div><div class="cert-name">IBM Data Science Professional Certificate</div><div class="cert-org">IBM / Coursera · May 2025</div><div class="cert-link-hint">&#8599; View credential</div></div></a>
+      </div>
+      <a href="https://drive.google.com/drive/folders/1BhS3JMb1l3PZ455KsCH5YNhpTOGvXW_8?usp=drive_link" target="_blank" class="resume-dl">View / Download Resume &#8599;</a>
+    </div>
+    <div>
+      <div class="resume-col-title">Core Competencies</div>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem">
+        <span class="exp-tag" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.1)">ML &amp; Predictive Modeling</span>
+        <span class="exp-tag" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.1)">Pipeline Development</span>
+        <span class="exp-tag" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.1)">NLP / LLMs / RAG</span>
+        <span class="exp-tag" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.1)">Statistical Modeling</span>
+        <span class="exp-tag" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.1)">Clinical &amp; Environmental Data</span>
+        <span class="exp-tag" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.1)">Data Quality &amp; QC</span>
+        <span class="exp-tag" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.1)">Data Visualization</span>
+        <span class="exp-tag" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.1)">ETL &amp; Data Engineering</span>
+        <span class="exp-tag" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.1)">Stakeholder Communication</span>
+      </div>
+      <div class="resume-col-title">Profiles</div>
+      <div style="display:flex;flex-direction:column;gap:.75rem">
+        <a href="https://linkedin.com/in/aby-joe-jose-88959021b" target="_blank" style="font-family:'Calibri','Gill Sans','Segoe UI',sans-serif,'Helvetica Neue',Arial,sans-serif;color:rgba(255,255,255,.7);text-decoration:none;font-size:.88rem;transition:.2s" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(255,255,255,.7)'">&#8599; linkedin.com/in/aby-joe-jose-88959021b</a>
+        <a href="https://github.com/AbyJoeJose/Data-Science-Portfolio" target="_blank" style="font-family:'Calibri','Gill Sans','Segoe UI',sans-serif,'Helvetica Neue',Arial,sans-serif;color:rgba(255,255,255,.7);text-decoration:none;font-size:.88rem;transition:.2s" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(255,255,255,.7)'">&#8599; github.com/AbyJoeJose/Data-Science-Portfolio</a>
+        <a href="https://credly.com/users/aby-joe-jose" target="_blank" style="font-family:'Calibri','Gill Sans','Segoe UI',sans-serif,'Helvetica Neue',Arial,sans-serif;color:rgba(255,255,255,.7);text-decoration:none;font-size:.88rem;transition:.2s" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(255,255,255,.7)'">&#8599; credly.com/users/aby-joe-jose</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="section-label">Get in Touch</div>
+  <h2 class="section-title">Contact</h2>
+  <p class="contact-intro">Currently seeking data scientist / analyst roles. Available June 2026. Open to relocation to New York, NY and beyond.</p>
+  <div class="contact-links">
+    <a href="mailto:abyjoejose00@gmail.com" class="contact-link"><div class="contact-link-icon">@</div><div><div class="contact-link-label">Email</div><div class="contact-link-text">abyjoejose00@gmail.com</div></div></a>
+    <a href="tel:+13156037376" class="contact-link"><div class="contact-link-icon">&#9742;</div><div><div class="contact-link-label">Phone</div><div class="contact-link-text">+1 (315) 603-7376</div></div></a>
+    <a href="https://linkedin.com/in/aby-joe-jose-88959021b" target="_blank" class="contact-link"><div class="contact-link-icon">in</div><div><div class="contact-link-label">LinkedIn</div><div class="contact-link-text">aby-joe-jose-88959021b</div></div></a>
+    <a href="https://github.com/AbyJoeJose/Data-Science-Portfolio" target="_blank" class="contact-link"><div class="contact-link-icon">gh</div><div><div class="contact-link-label">GitHub</div><div class="contact-link-text">AbyJoeJose/Data-Science-Portfolio</div></div></a>
+    <a href="https://credly.com/users/aby-joe-jose" target="_blank" class="contact-link"><div class="contact-link-icon">cr</div><div><div class="contact-link-label">Credly</div><div class="contact-link-text">credly.com/users/aby-joe-jose</div></div></a>
+  </div>
+</section>
+<footer><div class="footer-logo">Aby Joe Jose</div><div>MS Applied Data Science · Clarkson University · Available June 2026</div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+var BASE='https://github.com/AbyJoeJose/Data-Science-Portfolio/tree/main/';
+var PAL=['#1a3c5e','#2d6a4f','#c8a96e','#8b2635','#1a3c5e','#2d6a4f','#c8a96e','#8b2635','#1a3c5e','#2d6a4f','#c8a96e','#8b2635','#1a3c5e'];
+var PROJ=[
+  {n:'01',f:'AirBnB-Price-Prediction',t:'Airbnb Price Prediction',s:'End-to-end regression pipeline predicting listing prices using ensemble models and advanced feature engineering.',p:['XGBoost','Regression','Feature Eng.','Python'],h:'XGBoost',tp:'bar',d:[55,68,75,84,89],l:['EDA','Clean','Feat','Train','Tune']},
+  {n:'02',f:'Australia-Weather-Prediction',t:'Australia Weather Prediction',s:'Binary classification predicting next-day rain across Australian weather stations from historical meteorological data.',p:['Classification','Random Forest','Scikit-learn','Python'],h:'Random Forest',tp:'line',d:[50,62,71,80,85],l:['EDA','Encode','Model','Val','ROC']},
+  {n:'03',f:'Best-Selling-Books',t:'Best-Selling Books Analysis',s:'Exploratory analysis of Amazon bestseller trends — genre patterns, ratings, and author insights over a decade.',p:['EDA','Pandas','Seaborn','Visualization'],h:'EDA',tp:'bar',d:[60,72,80,85,88],l:['Load','Clean','EDA','Viz','Insights']},
+  {n:'04',f:'Bike-Sharing-Profit-Prediction',t:'Bike Sharing Profit Prediction',s:'Time-series regression forecasting bike-sharing demand and revenue across seasons and weather conditions.',p:['Time-Series','LightGBM','Regression','Python'],h:'LightGBM',tp:'line',d:[45,60,72,82,87],l:['EDA','Lag Feat','Model','CV','Deploy']},
+  {n:'05',f:'Credit-Default-Prediction',t:'Credit Default Prediction',s:'Pipeline on 307K + 1.67M records. XGBoost 91% accuracy, ROC-AUC 0.80, SMOTE for class imbalance.',p:['XGBoost','SMOTE','1.67M records','SQL'],h:'XGBoost',tp:'line',d:[40,60,72,82,91],l:['Data','Clean','SMOTE','Train','Eval']},
+  {n:'06',f:'IMDB-Movie-Analysis-SQL',t:'IMDB Movie Analysis — SQL',s:'Deep SQL analysis — genre trends, director performance, rating distributions, and decade-over-decade shifts.',p:['SQL','CTEs','Window Fn','Analysis'],h:'SQL',tp:'bar',d:[70,78,83,87,90],l:['Schema','Queries','CTEs','Window','Insights']},
+  {n:'07',f:'NLP-Job-Market-Analysis',t:'NLP Job Market Analysis',s:'End-to-end NLP on 50K+ job postings: DistilBERT NER, Mistral-7B JSON extraction, RAG with FAISS + LangChain.',p:['DistilBERT','Mistral-7B','FAISS','AWS Bedrock'],h:'DistilBERT',tp:'bar',d:[85,88,90,92,94],l:['NER','Struct','FAISS','RAG','Deploy']},
+  {n:'08',f:'NYC-Borough-Prediction',t:'NYC Borough Prediction',s:'Geospatial classification on 84,548 NYC property sales. Random Forest F1=0.72, 76% accuracy across 6 models.',p:['Random Forest','Geospatial','84K records','Scikit-learn'],h:'Random Forest',tp:'line',d:[58,64,67,76,74],l:['LR','DT','SVC','RF','GB']},
+  {n:'09',f:'Sales-Data-Warehouse-SQL',t:'Sales Data Warehouse — SQL',s:'Production star schema in MySQL with stored procedures, incremental ETL, indexing, and 7 KPI columns.',p:['SQL','Data Warehouse','Star Schema','ETL'],h:'SQL',tp:'bar',d:[65,74,80,86,90],l:['Schema','ETL','Index','Queries','BI']},
+  {n:'10',f:'SpaceX-Launch-Success-Prediction',t:'SpaceX Launch Success Prediction',s:'REST API to SQL to Folium maps to Plotly Dash to 4 ML models. Decision Tree 88.9% accuracy.',p:['ML','Plotly Dash','SQLite','Folium'],h:'ML',tp:'bar',d:[80,85,83,87,89],l:['API','SQL','Maps','Dash','ML']},
+  {n:'11',f:'Telecom-Churn-Prediction',t:'Telecom Churn Prediction',s:'XGBoost on 99,999 customer records with SMOTE and RFE feature selection. 83.4% accuracy.',p:['XGBoost','SMOTE','RFE','99K records'],h:'XGBoost',tp:'line',d:[52,65,74,83,88],l:['EDA','Feat','Model','SHAP','Thresh']},
+  {n:'12',f:'Walmart-Sales-RShiny',t:'Walmart Sales — R Shiny',s:'Interactive R Shiny dashboard for Walmart weekly sales — store comparisons, holiday effects, and forecasting.',p:['R Shiny','ggplot2','Forecasting','Dashboard'],h:'R Shiny',tp:'bar',d:[60,70,78,84,88],l:['Data','EDA','Model','Dash','Deploy']},
+  {n:'13',f:'Weather-Air-Quality-NY',t:'Weather & Air Quality NY',s:'Scalable ETL integrating EPA, NOAA & Open-Meteo APIs into MySQL with QC validation and seasonal analysis.',p:['ETL','REST APIs','MySQL','EPA/NOAA'],h:'ETL',tp:'line',d:[30,45,55,70,82],l:['EPA','NOAA','Meteo','ETL','QC']}
+];
+var g=document.getElementById('projects-grid');
+PROJ.forEach(function(p,i){
+  var cid='pc'+i;
+  var c=document.createElement('a');
+  c.href=BASE+p.f;c.target='_blank';c.className='project-card';
+  c.innerHTML='<div class="project-card-top"><div class="project-card-num">'+p.n+'</div><div class="project-card-title">'+p.t+'</div><div class="project-card-subtitle">'+p.s+'</div><span class="project-card-arrow">&#8599;</span></div><div class="project-card-viz"><canvas id="'+cid+'" style="width:100%;height:100%"></canvas></div><div class="project-card-bottom">'+p.p.map(function(pl){return'<span class="project-pill'+(pl===p.h?' hl':'')+'">'+pl+'</span>';}).join('')+'</div>';
+  g.appendChild(c);
+});
+function drawCharts(){
+  if(typeof Chart==='undefined'){setTimeout(drawCharts,100);return;}
+  var MF="'Calibri','Gill Sans','Segoe UI',sans-serif";
+  var SF="'Calibri','Gill Sans','Segoe UI',sans-serif,'Helvetica Neue',Arial,sans-serif";
+  PROJ.forEach(function(p,i){
+    var el=document.getElementById('pc'+i);
+    if(!el)return;
+    var col=PAL[i];
+    new Chart(el,{type:p.tp,data:{labels:p.l,datasets:[{data:p.d,backgroundColor:p.tp==='bar'?col:'rgba(26,60,94,0.08)',borderColor:col,borderWidth:2,fill:p.tp==='line',tension:0.4,pointRadius:2,pointBackgroundColor:col}]},options:{responsive:true,maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.raw+'%';}}}},scales:{x:{display:true,ticks:{font:{family:MF,size:9},color:'#7a7a7a'},grid:{display:false}},y:{display:false}}}});
+  });
+  new Chart(document.getElementById('radarChart'),{type:'radar',data:{labels:['Python/R','SQL & DB','ML Models','NLP/LLM','Viz & BI','ETL/Pipeline','Statistics','Research'],datasets:[{data:[95,90,97,82,88,90,87,96],backgroundColor:'rgba(26,60,94,0.15)',borderColor:'#1a3c5e',borderWidth:2,pointBackgroundColor:'#1a3c5e',pointRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{r:{min:60,max:100,ticks:{display:false},grid:{color:'rgba(0,0,0,.06)'},pointLabels:{font:{family:SF,size:12},color:'#3a3a3a'}}}}});
+  new Chart(document.getElementById('accuracyChart'),{type:'bar',data:{labels:['Credit Default','SpaceX Falcon 9','NYC Borough','EEG QC','NLP Pipeline','Telecom Churn','Bike Sharing'],datasets:[{data:[91,89,76,94,92,83,87],backgroundColor:['#1a3c5e','#1a3c5e','#1a3c5e','#c8a96e','#2d6a4f','#1a3c5e','#1a3c5e'],borderRadius:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.raw+'%';}}}},scales:{x:{ticks:{font:{family:MF,size:10},color:'#7a7a7a'},grid:{display:false}},y:{min:60,max:100,ticks:{font:{family:MF,size:10},color:'#7a7a7a',callback:function(v){return v+'%';}},grid:{color:'rgba(0,0,0,.04)'}}}}});
+  new Chart(document.getElementById('scaleChart'),{type:'bar',data:{labels:['Credit Default','NLP Pipeline','NYC Property','Telecom Churn','IMDB SQL','ISS Sensor','EPA Network'],datasets:[{data:[1977,50,84.5,99.9,100,62.2,730],backgroundColor:['#1a3c5e','#2d6a4f','#c8a96e','#8b2635','#1a3c5e','#2d6a4f','#c8a96e'],borderRadius:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){var v=c.raw;return v>=1000?(v/1000).toFixed(1)+'M records':v+'K records';}}}},scales:{x:{ticks:{font:{family:MF,size:10},color:'#7a7a7a'},grid:{display:false}},y:{ticks:{font:{family:MF,size:10},color:'#7a7a7a',callback:function(v){return v+'K';}},grid:{color:'rgba(0,0,0,.04)'}}}}});
+}
+drawCharts();
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('.skill-bar-fill').forEach(function(b){b.style.width=b.getAttribute('data-w')+'%';});obs.unobserve(e.target);}});},{threshold:0.3});
+document.querySelectorAll('.skill-category').forEach(function(el){obs.observe(el);});
+function switchViz(id,btn){document.querySelectorAll('.viz-tab').forEach(function(t){t.classList.remove('active');});document.querySelectorAll('.viz-panel').forEach(function(p){p.classList.remove('active');});document.getElementById('viz-'+id).classList.add('active');btn.classList.add('active');}
+</script>
+</body>
+</html>
