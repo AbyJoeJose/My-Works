@@ -68,6 +68,18 @@ End-to-end capstone predicting whether a Falcon 9 first stage will land successf
 
 ---
 
+### 📋 Policy & Workforce Analytics
+
+---
+
+#### [📊 Employment, Wage & Occupation Policy Analysis](./Employment-Wage-and-Occupation-Policy/)
+Quantitative policy research project applying population-level employment analysis, regression modeling, non-parametric hypothesis testing, wage inequality measurement, and anomaly detection to New York State's Occupational Employment and Wage Statistics (OEWS) — across **7,059 records spanning 10 regions and 23 major occupation groups**. OLS regression (R² = 0.974) identifies occupation group as the dominant wage driver over region. Mann-Whitney U (p = 3.6×10⁻²⁴) and Kruskal-Wallis (p = 2.1×10⁻⁵¹) confirm statistically significant wage stratification. Gini coefficients, Isolation Forest anomaly detection, and compliance flagging produce 7 enforcement-relevant policy findings.
+
+**Tools:** Python · Pandas · Statsmodels · Scikit-learn · SciPy · Seaborn · Matplotlib  
+**Techniques:** OLS Regression · Non-Parametric Hypothesis Testing · Gini Coefficient · Isolation Forest · Anomaly Detection · Wage Compliance Analysis · Coefficient of Variation · Policy Research
+
+---
+
 ### 🔤 Natural Language Processing
 
 ---
